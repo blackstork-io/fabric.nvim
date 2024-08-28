@@ -1,5 +1,19 @@
 ; inherits: hcl
 
+(template_expr
+  (heredoc_template
+    (heredoc_identifier) @_marker
+    (#eq? @_marker "EOT")
+    (template_literal) @injection.content
+    (#set! injection.language "gotmpl")))
+
+(template_expr
+  (heredoc_template
+    (heredoc_identifier) @_marker
+    (#eq? @_marker "EOQ")
+    (template_literal) @injection.content
+    (#set! injection.language "jq")))
+
 (function_call
   (identifier) @_func
   (#eq? @_func "query_jq")
