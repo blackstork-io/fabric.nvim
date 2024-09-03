@@ -13,7 +13,7 @@ However, this package provides tree-sitter queries that enable:
 ## Installation
 
 - [Install nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation) using your favorite plugin manager;
-- Install this repo (`blackstork-io/fabric-nvim`) using your favorite plugin manager as well;
+- Install this repo (`blackstork-io/fabric.nvim`) using your favorite plugin manager as well;
 - Install the `fabric`, `jq`, `gotmpl`, `html`, `css` parsers by running `:TSInstall` or adding them to the `ensure_installed` list in nvim-treesitter settings.
 
 For example, with [lazy.nvim](https://lazy.folke.io/):
@@ -23,7 +23,7 @@ require("lazy").setup({
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    dependencies = { "blackstork-io/fabric-nvim" },
+    dependencies = { "blackstork-io/fabric.nvim" },
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = { "fabric", "jq", "gotmpl", "html", "css", "regex" }, -- ......
